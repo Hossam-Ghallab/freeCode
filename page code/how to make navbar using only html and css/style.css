@@ -1,0 +1,134 @@
+/* ----------------- VAR ----------------- */
+:root {
+  --main-color: #0097e6;
+  --main-color-dark: #40739e;
+  --second-color: #2f3640;
+  --second-color-transpire: #353b48;
+  --text-color: #ddd; 
+  --border-r: 5px;
+}
+
+/* ----------------- SELECTION ----------------- */
+::selection {
+  background-color: var(--main-color);
+  color: #FFF;
+}
+
+/* ----------------- SMOOTH ----------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ----------------- SCROLL BAR ----------------- */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--second-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--second-color-transpire);
+}
+
+/* ----------------- CONTAINER ----------------- */
+.cont {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ----------------- ALL ELEMENTS -----------------*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', monospace;
+  background-color: var(--second-color);
+}
+/* --------------------------------------------------- */
+
+/* Start Nav */
+a {
+  text-decoration: none;
+}
+nav h2 {
+  font: 25px;
+  padding: 8px;
+  text-align: center;
+  background-color: var(--second-color-transpire);
+  color: var(--main-color);
+}
+nav h2 span {
+  padding: 0 5px;
+  color: var(--main-color-dark);
+}
+pre code {
+  font-size: 20px;
+  position: relative;
+}
+code::after {
+  content: '';
+  position: absolute;
+  padding: 5px;
+  top: 0;
+  left: 0;
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+}
+pre {
+  margin: 50px 0 20px;
+}
+code.html {
+  border-left: 3px solid #e67e22;
+}
+code.html::after {
+  content: 'HTML';
+  background-color: #e67e22;
+}
+code.css {
+  border-left: 3px solid #2980b9;
+}
+code.css::after {
+  content: 'CSS';
+  background-color: #2980b9;
+}
+/* code.js {
+  border-left: 3px solid #e1b12c;
+}
+code.js::after {
+  content: 'JavaScript';
+  background-color: #e1b12c;
+} */
+
+
+/* media */
+
+@media (max-width: 767px){
+  .cont {
+    width: 80%;
+  }
+}
+
+/* small */
+@media (min-width: 768px){
+  .cont {
+    width: 750px;
+  }
+}
+
+/* medium */
+@media (min-width: 992px){
+  .cont {
+    width: 970px;
+  }
+}
+
+/* large */
+@media (min-width: 1200px){
+  .cont {
+    width: 1170px;
+  }
+}
